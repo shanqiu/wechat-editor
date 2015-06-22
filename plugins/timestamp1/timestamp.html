@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2014, CKSource - Frederico Knabben. All rights reserved.
+Licensed under the terms of the MIT License (see LICENSE.md).
+-->
+<html>
+<head>
+	<title>Wechat Editor</title>
+	<meta charset="utf-8">
+	<script src="../../ckeditor.js"></script>
+	<link href="../../samples/sample.css" rel="stylesheet">
+</head>
+<body>
+	<br />
+	<br />
+	<div id="container">
+	<textarea id="editor1" style="height:100%">
+		&lt;p&gt;This is some sample text.
+	</textarea>
+	</div>
+	<script>
+
+		CKEDITOR.replace( 'editor1', {
+			height:'450px',
+			extraPlugins: 'timestamp1,maxeditor', 
+			removePlugins: 'elementspath',
+			toolbarGroups: [
+				{ name: 'max' },
+				{ name: 'addsome' }
+			],
+		} );
+
+	</script>
+
+</body>
+</html>
